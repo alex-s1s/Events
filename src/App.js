@@ -12,9 +12,9 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-        <Route exact path='/' component={Home} />
+        <Route exact path='/Home' component={Home} />
         <Route exact path='/cadastrar' component={Cadastrar} />
-        <Route exact path='/Login' component={Login} />
+        <Route exact path='/' component={Login} />
       </Router>
     </Provider>
   );
