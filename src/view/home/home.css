@@ -1,20 +1,103 @@
 .list-back{
-    background-color: #fafafa;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.fill{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    align-items: center;
+}
+
+.details{
+    margin-top: 20px;
+}
+
+.filter{
+    border-right: 1px solid #858383;
+}
+
+.filterDiv{
+    margin: 20px;
+}
+
+.finalidade{
+    margin:  10px 0;
+    padding-top: 10px 0;
+    border-top: 1px solid #858383;
+}
+
+.TypeImovel{
+    width: 60% !important;
+    margin:  10px 0;
+    padding-top: 10px 0;
+    border-top: 1px solid #858383;
+}
+
+.card-container{
+    margin-top: 20px;
     display: flex;
     justify-content: center;
 }
 
-.list-border{
+.card{
     width: 80%;
-    height: 100vh;
 }
 
+.card img{
+    width: 100%;
+    height: 100%;
+}
 
+.card .card-text1{
+    font-size: 10px;
+}
 
-@media (max-width: 800px){
-    .list-border {
-        width: 95%;
-    }
+.card .card-text2{
+    font-size: 13px;
+}
+
+.card p{
+    font-size: 10px;
+}
+
+.card .bold{
+    font-weight: bold;
+}
+
+.card .valorAvaliado{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .desconto{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .valorVenda{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .col-md-8{
+    min-height: 250px;
+}
+
+h3{
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.buttonName{
+    background-color: rgb(71, 71, 255);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 50px;
+    justify-content: center;
 }
