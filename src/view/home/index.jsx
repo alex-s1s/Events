@@ -68,11 +68,13 @@ function Home() {
         { id: 27, name: "Tocantins", sigla: "to" },
     ]
 
- 
+
 
     const url = []
     const url2 = [];
     const url3 = [];
+    const url4 = [];
+    const urltext = [];
     var urlVirg = [];
 
 
@@ -166,8 +168,24 @@ function Home() {
         urlVirg = arrf.join();
         console.log(urlVirg)
     }
+
     // Simple POST request with a JSON body using axios
     function makeGetRequest() {
+        const v1 = document.querySelector('input[name="name1"]').value
+        const v2 = document.querySelector('input[name="name2"]').value
+
+        var pos = url4.indexOf("&valor-min=")
+        if (pos === -1) {
+            url4.push("&valor-min=" + v1 + ("&valor-max=" + v2))
+        }
+
+        var arrf = url.concat(url2, url3, url4)
+        urlVirg = arrf.join();
+
+        urltext.push(urlVirg)
+
+        console.log(urltext)
+        console.log(urlVirg)
 
         axios({
             url: 'http://192.99.154.119/query',
@@ -192,7 +210,6 @@ function Home() {
             <section className="fill">
                 <h4>Paulo imóveis</h4>
 
-                
             </section>
             <section className="list-back" >
                 <section className="filter">
@@ -238,12 +255,22 @@ function Home() {
                                     </label>
                                 </div>
                             )}
-                        </div><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm" className="buttonName" onClick={makeGetRequest}>Filtrar</button>
-                        
+                        </div>
+                        <div className="valor" >
+                            valor
+                            <br />
+                            <input type="number" id="valor1" name="name1" value="1" />
+                            =
+                            <input type="number" id="valor2" name="name2" />
+                        </div>
+
+
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm" className="buttonName" onClick={makeGetRequest}>Filtrar</button>
+
                         <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-sm">
                                 <div class="modal-content">
-                                   Scrap resale.... buscando links
+                                    Scrap resale.... buscando links
                                 </div>
                             </div>
                         </div>

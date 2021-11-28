@@ -20,6 +20,12 @@
 .filter{
     border-right: 1px solid #858383;
 }
+.valor{
+    margin: 20px;
+}
+.valor input{
+    width: 80px;
+}
 
 .filterDiv{
     margin: 20px;
