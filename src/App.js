@@ -1,20 +1,20 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import store from '../src/store'
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import store from "../src/store";
 
 /*PÁGINAS*/
-import Login from './view/login'
-import Cadastrar from './view/new-user'
-import Home from './view/home'
+import Login from "./view/login";
+import Cadastrar from "./view/new-user";
+import Home from "./view/home";
 import { Provider } from "react-redux";
 
 function App() {
   return (
     <Provider store={store}>
       <Router>
-        <Route exact path='/Home' component={Home} />
-        <Route exact path='/cadastrar' component={Cadastrar} />
-        <Route exact path='/' component={Login} />
+        <Route exact path="/Home" component={Home} />
+        <Route exact path="/cadastrar" component={Cadastrar} />
+        <Route exact path="/" component={Login} />
       </Router>
     </Provider>
   );

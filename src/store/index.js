@@ -1,5 +1,5 @@
-import {createStore} from 'redux'
-import usuarioReducer from './usuarioReducer'
+import { createStore } from "redux";
+import usuarioReducer from "./usuarioReducer";
 
 const store = createStore(usuarioReducer);
 
